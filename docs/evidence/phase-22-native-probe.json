@@ -1,0 +1,16 @@
+{
+  "scope": "isolated native PostgreSQL; no existing service changes",
+  "checks": {
+    "native_start": "passed",
+    "pgvector_available": "missing",
+    "scram_wrong_password_denied": "passed",
+    "native_role_permissions": "passed",
+    "independent_connection_isolation": "passed",
+    "native_immediate_stop_recovery": "passed",
+    "native_dump_restore_fixture": "passed",
+    "missing_vector_migrations_roll_back": "passed"
+  },
+  "server_version": 180004,
+  "full_application_deployment": "blocked: pgvector unavailable",
+  "cluster_stopped": true
+}

@@ -1,0 +1,7 @@
+.feedback-list { display:grid; gap:20px; margin:24px 0; }
+.feedback-form { margin:22px 0; }.feedback-form summary { cursor:pointer; color:#155d59; font-weight:600; }
+.feedback-form form { margin-top:18px; }.feedback-form label { display:grid; gap:9px; margin:18px 0; }
+.feedback-form select,.feedback-form textarea { width:100%; padding:12px; border:1px solid #c9d7e3; border-radius:9px; background:white; color:#152d47; font:inherit; }
+.feedback-form textarea { resize:vertical; }.feedback-form p { font-size:13px; line-height:1.7; }
+.feedback-form .feedback-confirm { display:flex; align-items:flex-start; gap:12px; line-height:1.6; }.feedback-confirm input { margin-top:5px; flex-shrink:0; }
+.feedback-event { padding:18px 0; border-top:1px solid #e1e9ef; }.feedback-list blockquote { margin:18px 0; padding-left:16px; border-left:3px solid #a7cbbf; white-space:pre-wrap; }

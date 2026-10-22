@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adaptive MCQ · Local API</title>
+<style>
+body{margin:0;background:#0b1424;color:#e5eefb;font:16px/1.6 system-ui,sans-serif}main{max-width:900px;margin:56px auto;padding:0 24px}h1{font-size:36px;line-height:1.2}h2{font-size:22px}p{color:#b8c9df}.tag{color:#53dac9;font-size:13px;letter-spacing:.1em}section{background:#132239;border:1px solid #304662;border-radius:14px;padding:24px;margin:20px 0}button,a{color:#6ee7d7}button{background:#213954;border:1px solid #517697;border-radius:6px;padding:10px 16px;font:inherit;cursor:pointer}button:hover{background:#304a68}button:focus-visible,a:focus-visible{outline:3px solid #a78bfa;outline-offset:3px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;background:#091222;padding:16px;border-radius:8px}code{color:#c2ccff}small{color:#afc3db}
+</style></head>
+<body><main><div class="tag">LOCAL API · PHASE 4</div><h1>Adaptive MCQ backend</h1>
+<p>Authentication, role checks and diagnostics are available. Dashboards, assessments and AI features are planned. This page loads entirely from this computer.</p>
+<section><h2>Process health</h2><p><code>GET /api/v1/health/live</code> returns 200 while the API is running. It does not confirm database or model readiness.</p><button data-url="/api/v1/health/live">Check process</button></section>
+<section><h2>Database readiness</h2><p><code>GET /api/v1/health/ready</code> returns 200 when foundation checks pass, or 503 when setup is incomplete. Checks cover connectivity, pgvector, migration history and the runtime database role.</p><button data-url="/api/v1/health/ready">Check readiness</button></section>
+<section><h2>Response</h2><pre id="result" aria-live="polite">Choose a check above.</pre><small>A ready response confirms backend foundation only. It does not confirm that local LLMs are installed or that generation works.</small></section>
+<section><h2>Authentication</h2><p><code>POST /api/v1/auth/register</code> creates a student account. Send email, display_name and password as JSON. Teacher access is granted by a local operator.</p><p><code>POST /api/v1/auth/login</code> accepts email and password. Use the returned access token as <code>Authorization: Bearer &lt;token&gt;</code>. Tokens expire after 15 minutes by default.</p><p><code>GET /api/v1/auth/me</code> returns your profile and current roles. <code>POST /api/v1/auth/logout</code> ends the current session; <code>/logout-all</code> ends every session. <code>/change-password</code> takes current_password and new_password and ends all sessions.</p><small>No cookies, password reset email or refresh tokens are provided in this phase. Keep tokens private; this documentation page does not store them.</small></section>
+<section><h2>Role checks</h2><p><code>GET /api/v1/roles/teacher</code> and <code>/api/v1/roles/student</code> require the corresponding account role. These are access checks, not dashboards.</p></section>
+<section><h2>API contract</h2><p><a href="/openapi.json">OpenAPI JSON</a> describes the implemented routes. Errors include a safe message and request ID. A 401 means credentials/session are invalid; 403 means the role is missing; 429 means throttling; 503 means database setup needs attention.</p></section>
+</main><script>
+for(const button of document.querySelectorAll('button[data-url]')){
+ button.addEventListener('click',async()=>{
+  const result=document.getElementById('result');button.disabled=true;result.textContent='Checking…';
+  try{const response=await fetch(button.dataset.url,{cache:'no-store'});const body=await response.json();result.textContent='HTTP '+response.status+'\nRequest ID: '+response.headers.get('x-request-id')+'\n\n'+JSON.stringify(body,null,2);}
+  catch{result.textContent='The local API could not be reached.';}finally{button.disabled=false;}
+ });
+}
+</script></body></html>

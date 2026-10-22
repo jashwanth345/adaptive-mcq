@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-15",
+  "phase": 24,
+  "status": "passed",
+  "scope": "Artifact/documentation validation; no new application/model/learner tests",
+  "slides": 22,
+  "embedded_speaker_notes": 22,
+  "editable_tables": 4,
+  "actual_ui_screenshots": 2,
+  "screenshots": "Cropped actual Phase 20 frontend; synthetic accounts/records",
+  "all_slides_rendered_and_visually_reviewed": true,
+  "final_matches_reviewed_candidate_bytes": true,
+  "package_integrity": "pass",
+  "geometry_findings": 0,
+  "layout_warnings": [
+    {
+      "connector_id": "29",
+      "connector_z": 13,
+      "kind": "connector_over_text",
+      "slide": 1,
+      "text_object_id": "7",
+      "text_z": 8
+    },
+    {
+      "connector_id": "41",
+      "connector_z": 20,
+      "kind": "connector_over_text",
+      "slide": 19,
+      "text_object_id": "16",
+      "text_z": 17
+    }
+  ],
+  "warning_review": "Connector bounding boxes on slides 1 and 19 overlap text bounding boxes; actual routed lines visually clear. Table-fit warning corrected before delivery.",
+  "font": "Aptos from original presentation",
+  "artifact_reimport": "passed",
+  "native_powerpoint_or_google_slides_execution_tested": false,
+  "viva_questions": 60,
+  "explanation_targets_minutes": [
+    1,
+    3,
+    5
+  ],
+  "speech_duration_measured": false,
+  "markdown_files_checked": 86,
+  "local_link_targets_checked": 532,
+  "missing_local_links": [],
+  "original_pptx_sha256": "ef4df5c2ba13d2134a3d865ff85c389b402425a51e5521c585bda94cda568ea2",
+  "artifacts": [
+    {
+      "path": "Adaptive_MCQ_Final_Review_Phase24_Final.pptx",
+      "bytes": 591637,
+      "sha256": "c231f6e393a3521721ff0a81d7087a3a5670236fa3949ec548e60318087f5829"
+    },
+    {
+      "path": "Presentation_Content_and_Speaker_Notes_Phase24.md",
+      "bytes": 34666,
+      "sha256": "c6e97f2369ee084fa130659b7294daf157121007d456d8ca82bdd1e1969678ab"
+    },
+    {
+      "path": "Viva_and_Review_Guide_Phase24.md",
+      "bytes": 28302,
+      "sha256": "82e570d8eb3d3dc3eaa4071576b68ea50b2457af56f9837e63aa97b0b0e0fd7f"
+    },
+    {
+      "path": "Final_Review_Evidence_Register.md",
+      "bytes": 8743,
+      "sha256": "6b40e9e190d02b2f44bb0a10d115dc9aa8031f0a16163ee867ca26735517b31e"
+    }
+  ],
+  "application_changed": false,
+  "database_changed": false,
+  "model_inference": false,
+  "real_ai_quality_results": "To be evaluated",
+  "learner_results": "To be evaluated"
+}

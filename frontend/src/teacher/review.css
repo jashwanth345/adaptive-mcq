@@ -1,0 +1,11 @@
+.teacher-review-grid { display:grid;grid-template-columns:minmax(230px,.7fr) minmax(0,1.5fr);gap:24px;align-items:start; }
+.teacher-review-grid > * { min-width:0; }.teacher-review-detail p { overflow-wrap:anywhere;line-height:1.6; }
+.teacher-review-detail .field { display:grid;gap:8px;margin:18px 0;font-size:13px;font-weight:600; }
+.teacher-review-detail textarea,.teacher-review-detail input,.teacher-review-detail select { width:100%;min-width:0;box-sizing:border-box;padding:12px;border:1px solid #cbd6e2;border-radius:9px;background:white;color:#142c45;font:inherit; }
+.teacher-review-detail textarea { resize:vertical; }.teacher-review-detail :focus-visible { outline:3px solid #9e8cf0;outline-offset:3px; }
+.review-editor { border:1px solid #dce3ed;border-radius:12px;padding:20px;margin-top:24px; }.review-editor summary { cursor:pointer;font-weight:600; }
+.review-version { border-top:1px solid #e3e8ef;padding:12px 0; }.review-version small { display:block;color:#607389;font-size:12px; }
+@media(max-width:1050px) { .teacher-review-grid { grid-template-columns:1fr; } }
+
+.teacher-review-detail .draft-options { list-style-type:upper-alpha; }
+.teacher-review-detail .draft-options li::marker { color:#496078;font-weight:600; }

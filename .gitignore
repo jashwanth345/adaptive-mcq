@@ -1,0 +1,39 @@
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python / JavaScript generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+dist/
+coverage/
+test-results/
+integration-test-results/
+playwright-report/
+*.tsbuildinfo
+
+# Private documents, local state and generated evaluation data
+backend/uploads/
+data/
+models/
+tools/ollama/
+backups/
+logs/
+evaluation/runs/
+*.dump
+*.backup
+*.log
+
+# Editor / OS local state
+.DS_Store
+Thumbs.db
+.idea/

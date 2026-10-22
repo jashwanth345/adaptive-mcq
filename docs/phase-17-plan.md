@@ -1,0 +1,7 @@
+# Phase 17 — feedback, quarantine and review
+
+Authorized 13 October 2026. Add version/attempt-linked student issue reports and helpful/poor ratings, repeat-report deduplication, an owned review queue, distinct-reporter/exposure counts, revision-checked review decisions and auditable quarantine. Only completed legitimate attempts can report; unknown, foreign and ongoing attempts are refused. Student history exposes their reports without other reporters or teacher-only content.
+
+Report counts prioritize review, not guilt. Configurable thresholds are candidate policy, to be evaluated. Owner-confirmed defects permanently quarantine that version, block reapproval/new use and remove adaptive evidence. Historical scores remain unchanged and a score-review task records impact/acknowledgement. Teacher corrections use existing immutable version editing plus fresh verification/approval; private owners can quarantine and regenerate their own content without seeing classroom banks.
+
+Migration 010 preserves legacy reports and adds ratings, cases, append-only command/decision records and restricted functions. Add backend contracts/routes, student reporting/history, owner queue/details/actions, navigation, tests and documentation. No paid dependency, model download, inference, automatic retraining or automatic score rewrite. Verify real SQL gates, roles/privacy, rollback/retries, exposure denominators, UI and local browser integration. Stop after this phase; broad analytics remains Phase 18.

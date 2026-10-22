@@ -1,0 +1,18 @@
+{
+  "scope": "native synthetic application acceptance",
+  "database": "mcq_acceptance_604116376e",
+  "real_ai_inference": false,
+  "checks": [
+    "All 12 migrations, pgvector and restricted runtime readiness on native PostgreSQL",
+    "Synthetic classroom fixture with real local PDF files prepared in a separate test database",
+    "14 native browser classroom checks including saved answers, API restart, retry, analytics and quarantine",
+    "Native authenticated PDF upload/extraction and labelled mock draft generation",
+    "Independent native transactions enforce row locks with bounded contention",
+    "Immediate native database stop/restart preserves application rows and uploaded PDF metadata",
+    "Full database/PDF backup and separate native restore preserve all non-session table fingerprints and file hashes",
+    "Restored sessions revoked; fresh sign-in/source preview works and function ownership remains non-administrative"
+  ],
+  "status": "passed",
+  "browser_checks": 14,
+  "restored_database": "mcq_restore_604116376e"
+}

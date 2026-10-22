@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-15",
+  "user_authorized": true,
+  "toolchain_name": "Visual Studio Build Tools 2022",
+  "toolchain_classification": "FREE proprietary development tool",
+  "version": "17.14.37806.7",
+  "complete": true,
+  "reboot_required": false,
+  "bootstrapper_sha256": "2A6AA7D94E38D457A4EB3930FC60056ECAB06865B2EB925E5275B8473A017583",
+  "bootstrapper_signature": "Valid Microsoft Corporation",
+  "pgvector_version": "0.8.7",
+  "pgvector_commit": "f37c13f68b57d2c3472b2214fbcff699d6d34876",
+  "pgvector_dll_sha256": "5FBAE5B2C3034FEF6EBF79FE740BD077B4A47B34860F4FBA8A9E69856A387087",
+  "pgvector_classification": "FREE / OPEN SOURCE",
+  "model_downloads": 0
+}

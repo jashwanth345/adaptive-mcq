@@ -1,0 +1,15 @@
+{
+  "name": "adaptive-mcq-database-tests",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node schema.test.mjs && node validation.test.mjs && node attempts.test.mjs && node feedback.test.mjs && node analytics.test.mjs && node evaluation.test.mjs"
+  },
+  "description": "Test-only embedded PostgreSQL; not the application database",
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@electric-sql/pglite-pgvector": "0.0.9",
+    "@electric-sql/pglite-socket": "0.2.11"
+  }
+}
