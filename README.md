@@ -7,6 +7,7 @@ A local B.Tech assessment platform with teacher/student accounts, PDF processing
 **Real MCQ generation is not yet verified on the development laptop.** Its 8 GB RAM is heavily occupied; the latest check found 0.44 GiB available, below the 1.5 GiB inference guard. The 398 MB Qwen candidate is installed on that laptop but is not included in this repository. Mock questions are labelled and cannot be published. Passing application tests is not proof of LLM accuracy.
 
 - **New installation:** [GitHub clone and local setup](docs/github-setup.md).
+- **Team members:** [clone, accept collaborator access, use branches and request review](CONTRIBUTING.md).
 - **Already configured laptop:** run `Start-Project.cmd`, then open `http://localhost:5173`.
 - **Latest verified fixes and limits:** [local AI, course selection and assessment saving](docs/local-ai-fix-verification.md).
 - **Review package:** [final presentation](docs/review/Adaptive_MCQ_Final_Review_Phase24_Final.pptx), [speaker notes](docs/review/Presentation_Content_and_Speaker_Notes_Phase24.md), [viva guide](docs/review/Viva_and_Review_Guide_Phase24.md), [master blueprint](docs/review/Project_Master_Blueprint.md).
